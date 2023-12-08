@@ -15,14 +15,6 @@ Prašome įvesti skaičiu pagal pasirinkimą
 """
 do_list = []
 
-def pickle_chek():
-    filename = 'do_list.pkl'
-
-    if os.path.exists(filename):
-        pass
-    else:
-        with open(filename, 'wb') as file:
-            pickle.dump(do_list, file)
  
 def is_it_done(falsy): #funkcija skirta patikrint ar išspausdinti "Taip" ar "Ne" klausimui ar darbas atliktas
         is_job_done = ""
@@ -150,7 +142,6 @@ def save(do_list): # išsaugojam sąrašą
     print("Saved")
 
 def selection(): # funkcija skirta tikrinti ką norime atlikti
-    pickle_chek()
     number = begining()
     if (number == 1):
         rewie_jobs(do_list,1)
